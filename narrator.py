@@ -7,12 +7,12 @@ import simpleaudio as sa
 import errno
 from elevenlabs import generate, play, voices
 from config import ELEVENLABS_API_KEY
+from config import OPENAI_API_KEY
 from elevenlabs import set_api_key
 
 set_api_key(ELEVENLABS_API_KEY)
 
-client = OpenAI()
-
+client = OpenAI(api_key=OPENAI_API_KEY)
 
 def encode_image(image_path):
     while True:
